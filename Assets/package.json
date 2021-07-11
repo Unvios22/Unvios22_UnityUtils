@@ -1,0 +1,13 @@
+{
+  "name": "com.unvios22.unityutils",
+  "version": "0.1.0",
+  "displayName": "Unvios22 Unity Utils",
+  "description": "This is an example package",
+  "unity": "2020.3",
+  "unityRelease": "8f1",
+  "dependencies": {
+  },
+  "author": {
+    "name": "Kajetan Jóźwiak (Unvios22)",
+  }
+}
