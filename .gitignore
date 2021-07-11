@@ -92,7 +92,7 @@ crashlytics-build.properties
 [Bb]in/
 [Oo]bj/
 _UpgradeReport_Files/
-[Pp]ackages/
+# [Pp]ackages/ #commented because blocks Unity packages folder
 
 Thumbs.db
 Desktop.ini
