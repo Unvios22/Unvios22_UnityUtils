@@ -8,6 +8,7 @@ namespace Unvios22_UnityUtils.Runtime.Math {
 		/// <summary>
 		/// Returns Vector3 going between two Vectors 
 		/// </summary>
+		// I mean, c'mon, how many times does one have to recall whether it's "target - source" or "source - target"?
 		public static Vector3 VectorFromTo(Vector3 from, Vector3 to) {
 			return to - from;
 		}
