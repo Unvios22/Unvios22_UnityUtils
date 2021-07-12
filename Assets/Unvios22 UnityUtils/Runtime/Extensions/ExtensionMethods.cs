@@ -2,10 +2,15 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Unvios22_UnityUtils.Extensions {
+namespace Unvios22_UnityUtils.Runtime.Extensions {
 	public static class ExtensionMethods {
 		
-		//TODO: add documenting comment. Remark that this uses a coroutine created on the monobehavior obj.
+		/// <summary>
+		/// Invokes an Action after given delay.
+		/// </summary>
+		/// <remarks>
+		/// Starts a coroutine on the invoking MonoBehavior object.
+		/// </remarks>
 		public static void InvokeWithDelay(this MonoBehaviour monoBehaviour, Action methodToInvoke, float delay) {
 			monoBehaviour.StartCoroutine(InvokeWithDelayCoroutine(methodToInvoke, delay));
 		}
