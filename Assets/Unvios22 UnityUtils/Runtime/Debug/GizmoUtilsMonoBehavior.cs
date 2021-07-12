@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Unvios22_UnityUtils.Editor.Debug {
+namespace Unvios22_UnityUtils.Runtime.Debug {
 	internal class GizmoUtilsMonoBehavior : MonoBehaviour {
 		private Action _methodDefiningDesiredGizmos;
 		

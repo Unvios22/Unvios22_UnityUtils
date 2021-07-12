@@ -1,9 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Unvios22_UnityUtils.Editor.Debug {
+namespace Unvios22_UnityUtils.Runtime.Debug {
 	public static class GizmoUtils {
 		private const string CreatedHelperObjName = "GizmoHelper";
+		//TODO: possibly add more overloads that take a transform to follow, and follow it automatically in the scene
 		
 		/// <summary>
 		/// Draws a gizmo ray starting at <paramref name="position"/>, going in (and with the magnitude of) <paramref name="direction"/>,
@@ -54,7 +55,7 @@ namespace Unvios22_UnityUtils.Editor.Debug {
 
 		private static void InitializeGizmoHelperAndInsertDelegate(Action delegateMethod, float displayTime) {
 			//possible performance upgrade -> possibly creating redundant GC troubles with object creation and anonymous functions
-			//though it doesn't have to be optimized - it's for debug and editor only
+			//though it doesn't have to be optimized - it's for debug only
 			
 			var instantiatedGizmosHelper = new GameObject(CreatedHelperObjName);
 			var gizmoHelperMonoBehavior = instantiatedGizmosHelper.AddComponent<GizmoUtilsMonoBehavior>();
