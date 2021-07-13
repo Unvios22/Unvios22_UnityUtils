@@ -26,14 +26,14 @@ namespace Unvios22_UnityUtils.Runtime.Coroutines {
 				throw new ArgumentNullException(nameof(lerpValueConsumer), "Consumer cannot be null!");
 			}
 			var interpolationFunction = interpolationType.GetInterpolationFunction();
+
+			return coroutineTarget.StartCoroutine(
+				InterpolateWithConsumerActionCoroutine(InterpolationPercentageConsumer, interpolationTime));
 			
 			void InterpolationPercentageConsumer(float interpolationPercentage) {
 				var interpolationFuncResult = interpolationFunction.Invoke(interpolateFrom, interpolateTo, interpolationPercentage);
 				lerpValueConsumer.Invoke(interpolationFuncResult);
 			}
-
-			return coroutineTarget.StartCoroutine(
-				InterpolateWithConsumerActionCoroutine(InterpolationPercentageConsumer, interpolationTime));
 		}
 		
 		private static IEnumerator InterpolateWithConsumerActionCoroutine(Action<float> consumer, float interpolationTime) {
