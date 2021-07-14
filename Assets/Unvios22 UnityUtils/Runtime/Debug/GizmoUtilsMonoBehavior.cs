@@ -9,6 +9,7 @@ namespace Unvios22_UnityUtils.Runtime.Debug {
 			_methodDefiningDesiredGizmos = methodDefiningDesiredGizmos;
 		}
 
+		//TODO: Add ability to set a callback destroy, so that the invoking user receives a method to run to destroy the helper obj
 		internal void SetDestroyTime(float time) {
 			Destroy(gameObject, time);
 		}
