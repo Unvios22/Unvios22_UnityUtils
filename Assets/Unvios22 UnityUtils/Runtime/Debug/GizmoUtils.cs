@@ -63,7 +63,7 @@ namespace Unvios22_UnityUtils.Runtime.Debug {
 			GizmoUtilsInternal.DrawWireSphere(() => transformToFollow.position, radius, gizmoColor, displayTime);
 		}
 		
-		//TODO: simplify DrawVector... API calls
+		//TODO: simplify DrawVector... API calls?
 		
 		/// <summary>
 		/// Draws a gizmo arrow mesh, starting at <paramref name="startingPosition"/>, pointing in (and with the magnitude of)
@@ -77,18 +77,6 @@ namespace Unvios22_UnityUtils.Runtime.Debug {
 		}
 
 		/// <summary>
-		/// Draws a gizmo arrow mesh, starting at <paramref name="startingPosition"/> and ending at <paramref name="endPosition"/>,
-		/// coloring it with <paramref name="gizmoColor"/> and displaying for <paramref name="displayTime"/> seconds.
-		/// </summary>
-		/// <remarks> Creates a temp GizmoHelper object in the scene. Uses OnDrawGizmos() internally.</remarks>
-		public static void DrawVectorToPosition(Vector3 startingPosition, Vector3 endPosition, Color gizmoColor,
-			float displayTime) {
-			//TODO: test
-			var vectorToDrawDirection = VectorUtils.VectorFromTo(startingPosition, endPosition);
-			GizmoUtilsInternal.DrawVector(() => startingPosition,() => vectorToDrawDirection, gizmoColor, displayTime);
-		}
-		
-		/// <summary>
 		/// Draws a gizmo arrow mesh, following the position of <paramref name="transformToFollow"/>, pointing in
 		/// (and with the magnitude of) <paramref name="direction"/>, coloring it with <paramref name="gizmoColor"/>
 		/// and displaying for <paramref name="displayTime"/> seconds.
@@ -97,6 +85,17 @@ namespace Unvios22_UnityUtils.Runtime.Debug {
 		public static void DrawFollowingVector(Transform transformToFollow, Vector3 direction, Color gizmoColor,
 			float displayTime) {
 			GizmoUtilsInternal.DrawVector(() => transformToFollow.position,() => direction, gizmoColor, displayTime);
+		}
+		
+		/// <summary>
+		/// Draws a gizmo arrow mesh, starting at <paramref name="startingPosition"/> and ending at <paramref name="endPosition"/>,
+		/// coloring it with <paramref name="gizmoColor"/> and displaying for <paramref name="displayTime"/> seconds.
+		/// </summary>
+		/// <remarks> Creates a temp GizmoHelper object in the scene. Uses OnDrawGizmos() internally.</remarks>
+		public static void DrawVectorToPosition(Vector3 startingPosition, Vector3 endPosition, Color gizmoColor,
+			float displayTime) {
+			var vectorToDrawDirection = VectorUtils.VectorFromTo(startingPosition, endPosition);
+			GizmoUtilsInternal.DrawVector(() => startingPosition,() => vectorToDrawDirection, gizmoColor, displayTime);
 		}
 
 		/// <summary>

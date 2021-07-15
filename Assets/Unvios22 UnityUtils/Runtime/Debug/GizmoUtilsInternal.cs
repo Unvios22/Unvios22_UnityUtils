@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using UnityEngine;
-using Unvios22_UnityUtils.Runtime.Math;
 
 namespace Unvios22_UnityUtils.Runtime.Debug {
 	internal class GizmoUtilsInternal {
@@ -60,7 +59,6 @@ namespace Unvios22_UnityUtils.Runtime.Debug {
 			//possible performance upgrade -> possibly creating redundant GC troubles with object creation and anonymous functions
 			//though it doesn't have to be optimized - it's for debug only
 			
-			//TODO: possibly add GizmoHelper pooling?
 			var instantiatedGizmosHelper = new GameObject(CreatedHelperObjName);
 			var gizmoHelperMonoBehavior = instantiatedGizmosHelper.AddComponent<GizmoUtilsMonoBehavior>();
 			
