@@ -24,10 +24,10 @@ namespace Unvios22_UnityUtils.Runtime.Coroutines {
 		/// Invokes the <paramref name="consumer"/> Action every frame with current interpolation value.
 		/// </summary>
 		/// <returns>Reference to the started coroutine</returns>
-		public static Coroutine SlerpFloat(MonoBehaviour coroutineTarget, float from, float to,
+		public static Coroutine SmoothStepFloat(MonoBehaviour coroutineTarget, float from, float to,
 			[NotNull]Action<float> consumer, float interpolationTime) {
 			return InterpolationsInternal.StartInterpolatingCoroutine(coroutineTarget, from, to,
-				consumer, interpolationTime, new SlerpFloat());
+				consumer, interpolationTime, new SmoothStepFloat());
 		}
 		
 		/// <summary>
