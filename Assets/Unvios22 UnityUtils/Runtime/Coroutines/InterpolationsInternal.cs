@@ -6,7 +6,6 @@ using Unvios22_UnityUtils.Runtime.Coroutines.Model;
 
 namespace Unvios22_UnityUtils.Runtime.Coroutines {
 	internal static class InterpolationsInternal {
-		//TODO: add fixed update coroutines as well
 		
 		/// <summary>
 		/// Starts a coroutine on <paramref name="coroutineTarget"/> object that interpolates between <paramref name="interpolateFrom"/>

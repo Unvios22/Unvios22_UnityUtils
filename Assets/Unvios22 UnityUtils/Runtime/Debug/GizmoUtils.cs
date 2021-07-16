@@ -16,7 +16,7 @@ namespace Unvios22_UnityUtils.Runtime.Debug {
 		}
 
 		/// <summary>
-		/// Draws a gizmo ray that follows the position of <paramref name="transformToFollow"/>, going in (and with the magnitude of)
+		/// Draws a gizmo ray that follows the position of <paramref name="transformToFollow"/> every frame, going in (and with the magnitude of)
 		/// <paramref name="direction"/>, coloring it with <paramref name="gizmoColor"/> and displaying for <paramref name="displayTime"/>
 		/// seconds.</summary>
 		/// <remarks> Creates a temp GizmoHelper object in the scene. Uses OnDrawGizmos() internally.</remarks>
@@ -35,7 +35,7 @@ namespace Unvios22_UnityUtils.Runtime.Debug {
 		}
 
 		/// <summary>
-		/// Draws a gizmo sphere that follows <paramref name="transformToFollow"/> position, with given <paramref name="radius"/>,
+		/// Draws a gizmo sphere that follows <paramref name="transformToFollow"/> position every frame, with given <paramref name="radius"/>,
 		/// coloring it with <paramref name="gizmoColor"/> and displaying for <paramref name="displayTime"/> seconds.
 		/// </summary>
 		/// <remarks> Creates a temp GizmoHelper object in the scene. Uses OnDrawGizmos() internally.</remarks>
@@ -54,7 +54,7 @@ namespace Unvios22_UnityUtils.Runtime.Debug {
 		}
 
 		/// <summary>
-		/// Draws a gizmo wiresphere that follows <paramref name="transformToFollow"/> position, with given <paramref name="radius"/>,
+		/// Draws a gizmo wiresphere that follows <paramref name="transformToFollow"/> position every frame, with given <paramref name="radius"/>,
 		/// coloring it with <paramref name="gizmoColor"/> and displaying for <paramref name="displayTime"/> seconds.
 		/// </summary>
 		/// <remarks> Creates a temp GizmoHelper object in the scene. Uses OnDrawGizmos() internally.</remarks>
@@ -62,8 +62,6 @@ namespace Unvios22_UnityUtils.Runtime.Debug {
 			float displayTime) {
 			GizmoUtilsInternal.DrawWireSphere(() => transformToFollow.position, radius, gizmoColor, displayTime);
 		}
-		
-		//TODO: simplify DrawVector... API calls?
 		
 		/// <summary>
 		/// Draws a gizmo arrow mesh, starting at <paramref name="startingPosition"/>, pointing in (and with the magnitude of)
@@ -77,7 +75,7 @@ namespace Unvios22_UnityUtils.Runtime.Debug {
 		}
 
 		/// <summary>
-		/// Draws a gizmo arrow mesh, following the position of <paramref name="transformToFollow"/>, pointing in
+		/// Draws a gizmo arrow mesh, following the position of <paramref name="transformToFollow"/> every frame, pointing in
 		/// (and with the magnitude of) <paramref name="direction"/>, coloring it with <paramref name="gizmoColor"/>
 		/// and displaying for <paramref name="displayTime"/> seconds.
 		/// </summary>
@@ -99,7 +97,7 @@ namespace Unvios22_UnityUtils.Runtime.Debug {
 		}
 
 		/// <summary>
-		/// Draws a gizmo arrow mesh, following the position of <paramref name="transformToFollow"/> and ending at
+		/// Draws a gizmo arrow mesh, following the position of <paramref name="transformToFollow"/> every frame and ending at
 		/// <paramref name="endPosition"/>, coloring it with <paramref name="gizmoColor"/> and displaying for
 		/// <paramref name="displayTime"/> seconds.
 		/// </summary>
@@ -113,7 +111,7 @@ namespace Unvios22_UnityUtils.Runtime.Debug {
 		
 		/// <summary>
 		/// Draws a gizmo arrow mesh, starting at <paramref name="startingPosition"/> and following <paramref name="targetTransform"/> as
-		/// target, coloring it with <paramref name="gizmoColor"/> and displaying for <paramref name="displayTime"/> seconds.
+		/// target every frame, coloring it with <paramref name="gizmoColor"/> and displaying for <paramref name="displayTime"/> seconds.
 		/// </summary>
 		/// <remarks> Creates a temp GizmoHelper object in the scene. Uses OnDrawGizmos() internally.</remarks>
 		public static void DrawVectorToFollowedTransform(Vector3 startingPosition, Transform targetTransform,
@@ -124,8 +122,8 @@ namespace Unvios22_UnityUtils.Runtime.Debug {
 		}
 		
 		/// <summary>
-		/// Draws a gizmo arrow mesh, following the position of <paramref name="transformToFollow"/> and following
-		/// <paramref name="targetTransform"/> as target, coloring it with <paramref name="gizmoColor"/> and displaying
+		/// Draws a gizmo arrow mesh, following the position of <paramref name="transformToFollow"/> every frame and following
+		/// <paramref name="targetTransform"/> as target every frame, coloring it with <paramref name="gizmoColor"/> and displaying
 		/// for <paramref name="displayTime"/> seconds.
 		/// </summary>
 		/// <remarks> Creates a temp GizmoHelper object in the scene. Uses OnDrawGizmos() internally.</remarks>
