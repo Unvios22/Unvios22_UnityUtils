@@ -1,8 +1,8 @@
 {
   "name": "com.unvios22.unityutils",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "displayName": "Unvios22 UnityUtils",
-  "description": "Custom package of Unity utility scripts",
+  "description": "Custom package of Unity utility scripts and tools",
   "unity": "2020.3",
   "unityRelease": "8f1",
   "dependencies": {
