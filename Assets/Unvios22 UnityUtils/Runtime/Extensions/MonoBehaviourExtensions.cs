@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 
 namespace Unvios22_UnityUtils.Runtime.Extensions {
-	public static class ExtensionMethods {
+	public static class MonoBehaviourExtensions {
 		
 		/// <summary>Invokes an Action after given <paramref name="delay"/>.</summary>
 		/// <remarks>Starts a coroutine on the invoking MonoBehavior object. </remarks>
